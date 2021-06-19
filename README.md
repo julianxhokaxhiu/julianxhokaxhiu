@@ -6,6 +6,6 @@ Feel free to know more about me at https://julianxhokaxhiu.com
 
 ### My GitHub stats
 
-This does not take into account the work done in forks, organizations, or private repos.
-
 ![Github stats](https://github-readme-stats.vercel.app/api?username=julianxhokaxhiu&show_icons=true)
+
+\* does not take into account the work done in forks, organizations, or private repos.
