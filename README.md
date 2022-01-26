@@ -9,3 +9,7 @@ Feel free to know more about me at https://julianxhokaxhiu.com
 ![Github stats](https://github-readme-stats.vercel.app/api?username=julianxhokaxhiu&show_icons=true)
 
 \* does not take into account the work done in forks, organizations, or private repos.
+
+### My Github Trophies
+
+[![trophy](https://github-profile-trophy.vercel.app/?username=julianxhokaxhiu&theme=onedark)](https://github.com/ryo-ma/github-profile-trophy)
