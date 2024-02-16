@@ -1,0 +1,59 @@
+name: rotate-nuget-packages
+
+run-name: ${{ github.run_number }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      min-versions-to-keep:
+        type: number
+        description: Minimum versions to keep
+        required: false
+        default: 2
+
+env:
+  _GITHUB_PACKAGE_TYPE: nuget
+
+jobs:
+  get-packages:
+    name: Get Packages
+    runs-on: ubuntu-latest
+    outputs:
+      packages: ${{ steps.get-packages.outputs.result }}
+    steps:
+    - name: Get Packages
+      uses: actions/github-script@v7
+      id: get-packages
+      with:
+        github-token: ${{ secrets._GITHUB_PACKAGES_PAT }}
+        retries: 3
+        script: |
+          let ret = [];
+
+          for await (const response of github.paginate.iterator(
+            github.rest.packages.listPackagesForAuthenticatedUser,
+            { package_type: '${{ env._GITHUB_PACKAGE_TYPE }}', per_page: 100 }
+          )) {
+            const packages = response.data;
+            for(const idx in packages) ret.push(packages[idx].name);
+          }
+
+          console.log(`Number of packages found: ${ret.length}`);
+          console.log(`List of packages:`);
+          console.log(ret)
+          return ret;
+  delete-packages:
+    name: => ${{ matrix.package }}
+    runs-on: ubuntu-latest
+    needs: get-packages
+    strategy:
+      max-parallel: 3
+      matrix:
+        package: ${{ fromJson(needs.get-packages.outputs.packages) }}
+    steps:
+    - uses: actions/delete-package-versions@v5
+      with:
+        token: ${{ secrets._GITHUB_PACKAGES_PAT }}
+        package-name: ${{ matrix.package }}
+        package-type: ${{ env._GITHUB_PACKAGE_TYPE }}
+        min-versions-to-keep: ${{ inputs.min-versions-to-keep }}
