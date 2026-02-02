@@ -43,6 +43,7 @@ jobs:
         uses: Erik-Donath/github-profile-trophy@feature/generate-svg
         with:
           username: ${{ github.repository_owner }}
+          theme: onedark
           file: profile/trophy.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
