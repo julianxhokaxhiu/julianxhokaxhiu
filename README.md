@@ -6,10 +6,10 @@ Feel free to know more about me at https://julianxhokaxhiu.com
 
 ### My GitHub stats
 
-![Github stats](./profile/stats.svg)
+[![Github stats](./profile/stats.svg)](https://github.com/stats-organization/github-readme-stats-action)
 
 \* does not take into account the work done in forks, organizations, or private repos.
 
 ### My Github Trophies
 
-[![trophy](http://trophy.ryglcloud.net/?username=julianxhokaxhiu&theme=onedark)](https://github.com/ryo-ma/github-profile-trophy)
+[![trophy](./profile/trophy.svg)](https://github.com/ryo-ma/github-profile-trophy)
