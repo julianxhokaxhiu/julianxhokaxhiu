@@ -44,6 +44,8 @@ jobs:
         with:
           username: ${{ github.repository_owner }}
           theme: onedark
+          max-cols: 6
+          max-rows: 3
           file: profile/trophy.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
