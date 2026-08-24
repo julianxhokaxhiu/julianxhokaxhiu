@@ -39,14 +39,26 @@ jobs:
           options: username=readme-tools&repo=github-readme-stats
           path: profile/pin-readme-tools-github-readme-stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-          
-      - name: Generate trophy
-        uses: ryo-ma/github-profile-trophy@master
+
+      - name: Checkout github-profile-trophy source
+        uses: actions/checkout@v6
         with:
-          username: ${{ github.repository_owner }}
-          theme: onedark
-          output_path: profile/trophy.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ryo-ma/github-profile-trophy
+          ref: master
+          path: .trophy-src
+
+      - name: Setup Deno
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v1.x
+
+      - name: Generate trophy
+        env:
+          GITHUB_TOKEN1: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          deno run --allow-net --allow-env --allow-read --allow-write \
+            .github/scripts/render-trophy.ts \
+            "${{ github.repository_owner }}" "profile/trophy.svg" "onedark" 6 3
 
       - name: Commit cards
         run: |
