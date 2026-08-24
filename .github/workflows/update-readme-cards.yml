@@ -40,13 +40,11 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           
       - name: Generate trophy
-        uses: Erik-Donath/github-profile-trophy@feature/generate-svg
+        uses: ryo-ma/github-profile-trophy@master
         with:
           username: ${{ github.repository_owner }}
           theme: onedark
-          max-cols: 6
-          max-rows: 3
-          file: profile/trophy.svg
+          output_path: profile/trophy.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit cards
