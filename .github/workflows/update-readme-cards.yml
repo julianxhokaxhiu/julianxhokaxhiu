@@ -44,7 +44,7 @@ jobs:
         uses: actions/checkout@v6
         with:
           repository: ryo-ma/github-profile-trophy
-          ref: master
+          ref: e3c89df995e92e67cdd4b2acaab9d974583dc1f7
           path: .trophy-src
 
       - name: Setup Deno
