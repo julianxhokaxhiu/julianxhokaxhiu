@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Julian Xhokaxhiu&#39;s GitHub Stats, Rank: A+</title>
-        <desc id="descId">Total Stars Earned: 1378, Total Commits  (last year) : 893, Total PRs: 340, Total Issues: 408, Contributed to (last year): 29</desc>
+        <desc id="descId">Total Stars Earned: 1380, Total Commits  (last year) : 905, Total PRs: 344, Total Issues: 408, Contributed to (last year): 31</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 7.540605387886791;
+        stroke-dashoffset: 7.3908284702979845;
       }
     }
   
@@ -184,7 +184,7 @@
         x="224.01"
         y="12.5"
         data-testid="commits"
-      >893</text>
+      >905</text>
     </g>
   </g><g transform="translate(0, 50)">
     <g class="stagger" style="animation-delay: 750ms" transform="translate(25, 0)">
@@ -199,7 +199,7 @@
         x="224.01"
         y="12.5"
         data-testid="prs"
-      >340</text>
+      >344</text>
     </g>
   </g><g transform="translate(0, 75)">
     <g class="stagger" style="animation-delay: 900ms" transform="translate(25, 0)">
@@ -229,7 +229,7 @@
         x="224.01"
         y="12.5"
         data-testid="contribs"
-      >29</text>
+      >31</text>
     </g>
   </g>
     </svg>
