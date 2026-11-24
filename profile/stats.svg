@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Julian Xhokaxhiu&#39;s GitHub Stats, Rank: A+</title>
-        <desc id="descId">Total Stars Earned: 1395, Total Commits  (last year) : 1163, Total PRs: 352, Total Issues: 412, Contributed to (last year): 38</desc>
+        <desc id="descId">Total Stars Earned: 1395, Total Commits  (last year) : 1173, Total PRs: 352, Total Issues: 412, Contributed to (last year): 38</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 5.562282454978691;
+        stroke-dashoffset: 5.516723281945907;
       }
     }
   
